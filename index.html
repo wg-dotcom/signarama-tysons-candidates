@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remote Team Candidates — Signarama Tysons Corner</title>
+  <link rel="icon" type="image/x-icon" href="https://signarama.com/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #B31D2D;
+      --primary-dark: #8E1724;
+      --primary-deeper: #6E1019;
+      --primary-soft: #B31D2D1a;
+      --dark: #1A1A1A;
+      --dark-mid: #2A2A2A;
+      --highlight: #D4A853;
+      --bg-page: #f9f9f9;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FEFEFE;
+      --bg-subtle: #f2f2f2;
+      --white: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-mid: #4A4A4A;
+      --text-light: #888888;
+      --text-muted: #BBBBBB;
+      --border: rgba(0,0,0,0.08);
+      --border-strong: rgba(0,0,0,0.15);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.10);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+      --radius: 14px;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); font-size: 15px; color: var(--text-primary); background: var(--bg-page); line-height: 1.6; }
+
+    /* HEADER */
+    .site-header { background: var(--white); padding: 0 32px; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--border); }
+    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .header-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text-primary); }
+    .header-brand img { height: 28px; width: auto; }
+    .header-logo-text { font-family: var(--font-heading); font-weight: 800; font-size: 18px; color: var(--primary); letter-spacing: -0.5px; }
+    .header-divider { width: 1px; height: 24px; background: var(--border-strong); }
+    .header-title { font-family: var(--font-heading); font-weight: 600; font-size: 12px; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; }
+    .header-badge { background: var(--primary); color: white; font-family: var(--font-heading); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+    /* HERO */
+    .hero { background: var(--dark); padding: 72px 32px 56px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -40%; right: -20%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(179,29,45,0.15), transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+    .hero-eyebrow { font-family: var(--font-heading); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--primary); margin-bottom: 16px; display: inline-flex; align-items: center; gap: 8px; }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 24px; height: 1px; background: var(--primary); }
+    .hero h1 { font-family: var(--font-heading); font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .hero-sub { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 620px; margin: 0 auto 32px; line-height: 1.7; }
+    .hero-meta { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+    .hero-meta-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.5); }
+    .hero-meta-item svg { width: 16px; height: 16px; opacity: 0.5; }
+    .hero-meta-item strong { color: var(--white); font-weight: 600; }
+
+    /* INTRO NOTE */
+    .intro-note { max-width: 900px; margin: -28px auto 40px; padding: 0 32px; position: relative; z-index: 2; }
+    .intro-card { background: var(--white); border-radius: var(--radius); padding: 32px 36px; box-shadow: var(--shadow-md); border-left: 4px solid var(--primary); }
+    .intro-card p { font-size: 15px; line-height: 1.8; color: var(--text-mid); margin-bottom: 12px; }
+    .intro-card p:last-child { margin-bottom: 0; }
+    .intro-card strong { color: var(--primary); font-weight: 600; }
+
+    /* ROLE SWITCHER */
+    .role-nav { max-width: 900px; margin: 0 auto 12px; padding: 0 32px; }
+    .role-switcher { display: flex; background: var(--white); border-radius: 12px; box-shadow: var(--shadow-sm); overflow: hidden; border: 1px solid var(--border); }
+    .role-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 12px; border: none; background: transparent; font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--text-light); cursor: pointer; transition: all 0.25s ease; border-bottom: 3px solid transparent; position: relative; }
+    .role-btn:hover { color: var(--text-primary); background: var(--bg-subtle); }
+    .role-btn.active { color: var(--primary); border-bottom-color: var(--primary); background: var(--white); }
+    .role-count { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: var(--bg-subtle); color: var(--text-light); font-size: 11px; font-weight: 700; }
+    .role-btn.active .role-count { background: var(--primary); color: var(--white); }
+    .role-panel { animation: fadeIn 0.3s ease; }
+    .role-panel.hidden { display: none; }
+
+    /* ROLE INTRO */
+    .role-intro { max-width: 900px; margin: 32px auto 8px; padding: 0 32px; }
+    .role-intro-card { background: var(--white); border-radius: 10px; padding: 20px 28px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+    .role-intro-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+    .role-intro-text { font-size: 14px; line-height: 1.75; color: var(--text-mid); }
+
+    /* SECTION LABELS */
+    .section-label { max-width: 1100px; margin: 36px auto 24px; padding: 0 40px; }
+    .section-label h2 { font-family: var(--font-heading); font-size: clamp(20px, 2.5vw, 26px); font-weight: 700; color: var(--text-primary); }
+    .section-label p { font-size: 14px; color: var(--text-light); margin-top: 4px; }
+
+    /* CANDIDATE CARDS */
+    .candidates { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .candidate-card { margin-bottom: 40px; }
+    .card { background: var(--bg-card); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border); transition: box-shadow 0.3s ease, transform 0.3s ease; }
+    .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .card.featured { border-color: var(--primary); box-shadow: 0 4px 20px rgba(179,29,45,0.12); }
+    .card.featured:hover { box-shadow: 0 8px 32px rgba(179,29,45,0.18); }
+    .card-top { background: var(--dark); padding: 32px 40px; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+    .card-identity { display: flex; align-items: center; gap: 18px; }
+    .card-avatar { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.6); flex-shrink: 0; }
+    .featured .card-avatar, .card-avatar.featured-avatar { background: var(--primary); color: var(--white); }
+    .card-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--white); }
+    .card-location { font-size: 13px; color: rgba(255,255,255,0.55); display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+    .card-location svg { flex-shrink: 0; }
+    .card-badges { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+    .badge { font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 6px; letter-spacing: 0.04em; }
+    .badge-shortlisted { background: var(--primary); color: var(--white); }
+    .badge-portfolio { background: rgba(212,168,83,0.2); color: var(--highlight); }
+    .card-rate { text-align: right; flex-shrink: 0; }
+    .card-rate-amount { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--white); }
+    .card-rate-period { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+
+    /* CARD BODY */
+    .card-body { padding: 36px 40px; }
+    .card-narrative { font-size: 15px; line-height: 1.85; color: var(--text-mid); font-style: italic; border-left: 3px solid var(--primary); padding-left: 20px; margin-bottom: 28px; }
+    .card-section-title { font-family: var(--font-heading); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--primary); margin: 28px 0 14px; }
+    .card-section-title:first-child { margin-top: 0; }
+
+    /* EXPERIENCE TIMELINE */
+    .experience-list { display: flex; flex-direction: column; gap: 16px; }
+    .exp-item { display: flex; gap: 14px; align-items: flex-start; }
+    .exp-dot-col { display: flex; flex-direction: column; align-items: center; padding-top: 6px; }
+    .exp-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
+    .exp-line { width: 1px; flex: 1; background: var(--primary-soft); min-height: 24px; }
+    .exp-content { flex: 1; }
+    .exp-role { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .exp-company { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+    .exp-highlight { font-size: 12px; color: var(--primary); margin-top: 4px; line-height: 1.5; }
+
+    /* TAGS */
+    .tags-cluster { display: flex; flex-wrap: wrap; gap: 7px; }
+    .ctag { font-size: 12px; padding: 5px 12px; border-radius: 6px; background: var(--bg-subtle); color: var(--text-mid); font-weight: 500; }
+    .ctag-key { background: var(--primary-soft); color: var(--primary); font-weight: 600; }
+
+    /* FIT INDICATORS */
+    .fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .fit-item { background: var(--bg-subtle); padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border); }
+    .fit-label { font-size: 12px; color: var(--text-mid); line-height: 1.55; }
+
+    /* STRENGTH BARS */
+    .strength-bars { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+    .bar-item { display: flex; flex-direction: column; gap: 5px; }
+    .bar-label { font-size: 12px; color: var(--text-mid); font-weight: 500; }
+    .bar-track { height: 5px; background: var(--bg-subtle); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--highlight)); border-radius: 3px; transition: width 1.2s ease; }
+
+    /* CARD ACTIONS */
+    .card-actions { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; gap: 12px; flex-wrap: wrap; }
+    .video-intro-btn { display: inline-flex; align-items: center; gap: 7px; padding: 9px 18px; background: transparent; border: 1.5px solid var(--primary); border-radius: 6px; color: var(--primary); font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s ease; }
+    .video-intro-btn:hover { background: var(--primary); color: var(--white); transform: translateY(-1px); }
+    .portfolio-btn { border-color: var(--highlight); color: var(--highlight); }
+    .portfolio-btn:hover { background: var(--highlight); color: var(--dark); }
+
+    /* CARD FOOTER */
+    .card-footer { padding: 20px 40px; background: var(--bg-subtle); border-top: 1px solid var(--border); }
+    .card-recruiter-note { padding: 0; }
+    .recruiter-note-title { font-family: var(--font-heading); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 8px; }
+    .card-recruiter-note p { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+
+    /* COMPARISON TABLE */
+    .comparison-section { max-width: 1100px; margin: 8px auto 48px; padding: 0 40px; }
+    .comparison-table-wrap { overflow-x: auto; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+    .comparison-table { width: 100%; border-collapse: collapse; background: var(--bg-card); font-size: 13px; color: var(--text-mid); border-radius: 12px; overflow: hidden; }
+    .comparison-table thead th { background: var(--dark); color: var(--primary); padding: 14px 16px; text-align: left; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .comparison-table thead th:first-child { border-radius: 14px 0 0 0; }
+    .comparison-table thead th:last-child { border-radius: 0 14px 0 0; }
+    .comparison-table tbody td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    .comparison-table tbody tr:last-child td { border-bottom: none; }
+    .comparison-table tbody tr:hover { background: var(--bg-subtle); }
+    .highlight-cell { background: var(--primary-soft); font-weight: 600; color: var(--primary); }
+
+    /* ADVISOR */
+    .advisor-section { max-width: 1100px; margin: 0 auto 40px; padding: 0 40px; }
+    .advisor-card { background: var(--bg-card); border-radius: var(--radius); padding: 32px 36px; display: flex; align-items: center; gap: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+    .advisor-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-soft); flex-shrink: 0; }
+    .advisor-info { flex: 1; }
+    .advisor-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 4px; }
+    .advisor-name { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--text-primary); }
+    .advisor-role { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+    .advisor-summary { font-size: 14px; color: var(--text-mid); line-height: 1.65; margin-top: 10px; }
+
+    /* FOOTER */
+    .site-footer { background: var(--dark); padding: 32px; text-align: center; }
+    .footer-logos { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 12px; }
+    .footer-logos img { height: 22px; filter: brightness(10); opacity: 0.7; }
+    .footer-x { color: rgba(255,255,255,0.3); font-size: 14px; }
+    .site-footer p { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .site-footer a { color: var(--primary); text-decoration: none; }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero { padding: 48px 20px 40px; }
+      .hero-meta { gap: 16px; }
+      .intro-note, .role-nav { padding: 0 16px; }
+      .role-switcher { flex-wrap: wrap; }
+      .role-btn { flex: 1 1 45%; font-size: 12px; padding: 12px 8px; }
+      .section-label, .candidates, .comparison-section, .advisor-section { padding: 0 16px; }
+      .card-top { flex-direction: column; padding: 24px; gap: 16px; }
+      .card-body { padding: 24px; }
+      .card-footer { padding: 16px 24px; }
+      .candidate-card { padding: 0; }
+      .fit-grid { grid-template-columns: 1fr; }
+      .strength-bars { grid-template-columns: 1fr; }
+      .advisor-card { flex-direction: column; text-align: center; }
+      .comparison-table { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="header-brand" href="https://signarama.com/locations/va-tysons-corner/" target="_blank">
+        <span class="header-logo-text">SIGNARAMA</span>
+        <span class="header-divider"></span>
+        <span class="header-title">Tysons Corner</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span class="header-badge">White Glove</span>
+        <img src="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Logo-2-e1759568299542.png" alt="Sagan" style="height:20px;opacity:0.6;">
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">White Glove Placement</div>
+      <h1>The Remote Unit</h1>
+      <p class="hero-sub">16 vetted professionals across Graphic Design, Customer Service, Sales Development, and Project Management. Built for Signarama Tysons Corner.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <strong>16</strong> Candidates
+        </div>
+        <div class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <strong>4</strong> Roles
+        </div>
+        <div class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <strong>April 2026</strong>
+        </div>
+        <div class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Advisor: <strong>Jesus Pacheco</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="intro-note">
+    <div class="intro-card">
+      <p>In the high-velocity commercial landscape, <strong>speed is the only currency that matters</strong>. This Signarama team represents the intersection of specialized technical expertise and aggressive operational efficiency. We aren't just filling seats; we are deploying a tactical remote unit designed to protect your margins and accelerate your lead-to-install pipeline.</p>
+      <p>From precision-engineered graphic design to relentless sales outreach and seamless dispatching, these professionals are vetted through Sagan's most rigorous <strong>'White Glove' process</strong>. This is your operational backbone, built to dominate the B2B signage market while your local team stays on-site, closing and installing.</p>
+    </div>
+  </div>
+
+  <div class="role-nav">
+    <div class="role-switcher">
+      <button class="role-btn active" onclick="showRole('designers')" data-role="designers">Graphic Designers <span class="role-count">4</span></button>
+      <button class="role-btn" onclick="showRole('csr')" data-role="csr">CSRs <span class="role-count">4</span></button>
+      <button class="role-btn" onclick="showRole('sdr')" data-role="sdr">SDRs <span class="role-count">4</span></button>
+      <button class="role-btn" onclick="showRole('pm')" data-role="pm">Project Managers <span class="role-count">4</span></button>
+    </div>
+  </div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- GRAPHIC DESIGNERS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="role-designers" class="role-panel">
+
+  <div class="role-intro">
+    <div class="role-intro-card">
+      <div class="role-intro-title">Signage Graphic Designers</div>
+      <div class="role-intro-text">These are production-ready designers, not concept artists. Every candidate in this group understands bleed, margins, CMYK workflows, and the technical gap between a screen mockup and a physical installation. From vehicle wraps to illuminated channel letters, they're built to move the creative heavy lifting off your local team's plate so Tysons can focus on closing deals and running installs.</div>
+    </div>
+  </div>
+
+  <div class="section-label">
+    <h2>Designer Profiles</h2>
+    <p>4 candidates vetted for signage-specific graphic design.</p>
+  </div>
+
+  <div class="candidates">
+
+    <!-- XALLY -->
+    <div class="candidate-card">
+      <div class="card featured" id="d-xally">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar featured-avatar">XI</div>
+            <div>
+              <div class="card-name">Xally I</div>
+              <div class="card-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Mexico &middot; Large-Format Print Specialist
+              </div>
+              <div class="card-badges">
+                <span class="badge badge-shortlisted">Pre-Shortlisted</span>
+                <span class="badge badge-portfolio">Portfolio</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-rate">
+            <div class="card-rate-amount">$1,700/mo</div>
+            <div class="card-rate-period">USD / Month</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Xally is the production-ready hire in this group. She's spent years doing exactly what Signarama Tysons needs: large-format print, CMYK workflows, bleed management, vendor specs. Heineken, Nestle, Disney, Telcel. She doesn't guess at pre-press. She lives it.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Large-Format Graphic Designer</div><div class="exp-company">Signage &amp; Outdoor Advertising &middot; Ongoing</div><div class="exp-highlight">Vehicle wraps, mobile billboards, event graphics, inflatables, LED displays for Heineken, Nestle, Disney, Telcel</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Production Artist</div><div class="exp-company">Print &amp; Signage Production</div><div class="exp-highlight">CMYK workflows, bleed management, vendor specification compliance across outdoor advertising</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Graphic Designer</div><div class="exp-company">Digital &amp; Print Media</div><div class="exp-highlight">Full production-ready artwork for signage installations, event branding, and corporate identity</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Adobe Illustrator</span><span class="ctag ctag-key">Adobe Photoshop</span><span class="ctag ctag-key">Adobe InDesign</span>
+            <span class="ctag">Large-Format Print</span><span class="ctag">Vehicle Wraps</span><span class="ctag">CMYK / Pre-Press</span><span class="ctag">Bleed Management</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">Specialized in the exact deliverables Tysons needs: large-format, vehicle wraps, outdoor signage, and LED displays</div></div>
+            <div class="fit-item"><div class="fit-label">Heineken, Nestle, Disney, Telcel as clients. Brands that demand zero tolerance for production errors</div></div>
+            <div class="fit-item"><div class="fit-label">Deep CMYK, bleed, and vendor spec expertise. Pre-press files will be technically accurate from day one</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Large-Format Production</div><div class="bar-track"><div class="bar-fill" style="width:97%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Pre-Press / Bleed</div><div class="bar-track"><div class="bar-fill" style="width:96%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Adobe Creative Suite</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Vehicle Wraps</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+          </div>
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/04318564-6b5a-4b9a-8861-7b9e030bc6a8" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+            <a class="video-intro-btn portfolio-btn" href="https://drive.google.com/file/d/1avehFj8hCN4DSc4SnrSLlNdr8vt-E8ri/view" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>View Portfolio</a>
+          </div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Xally is the safest bet for Signarama's specific needs. Her entire career is built around the exact technical requirements you described: large-format production, vehicle wraps, outdoor advertising, and precision pre-press files. She's worked with brands that demand zero tolerance for error. At $1,700/mo, this is a steal for someone who understands bleed, margins, and vendor specs without needing to be taught. She's the hire that lets your local team stop worrying about file accuracy.</p></div></div>
+      </div>
+    </div>
+
+    <!-- CRISPIN -->
+    <div class="candidate-card">
+      <div class="card" id="d-crispin">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">CC</div>
+            <div>
+              <div class="card-name">Crispin C</div>
+              <div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Philippines &middot; 7+ yrs Signage Design</div>
+              <div class="card-badges"><span class="badge badge-portfolio">Portfolio</span></div>
+            </div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,700/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Crispin has been designing signs for sign companies for 7+ years. ACU Signs, ADR Advertising, A1 Advertising. He didn't stumble into signage. He chose it. BFA in Advertising plus a drafting degree means he thinks in both creative and technical dimensions.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Senior Graphic Designer</div><div class="exp-company">ACU Signs &middot; Signage &amp; Marketing</div><div class="exp-highlight">Signage design, marketing collaterals, brand guidelines compliance for commercial clients</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Graphic Designer</div><div class="exp-company">ADR Advertising &amp; A1 Advertising</div><div class="exp-highlight">Custom sign design, large-format layouts, corporate identity for sign companies</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">BFA Advertising + BTech Drafting</div><div class="exp-company">Dual Degree</div><div class="exp-highlight">Creative and technical foundation in both advertising design and technical drafting</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Adobe Creative Suite</span><span class="ctag ctag-key">CorelDRAW</span><span class="ctag">Signage Design</span><span class="ctag">Marketing Collateral</span><span class="ctag">Brand Guidelines</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">7+ years exclusively in signage. Clients are actual sign companies: ACU, ADR, A1. He already knows the industry</div></div>
+            <div class="fit-item"><div class="fit-label">Dual degree: BFA Advertising + BTech Drafting. Thinks in both creative and technical dimensions</div></div>
+            <div class="fit-item"><div class="fit-label">CorelDRAW proficiency is a bonus for signage workflows. Most designers lack this</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Signage-Specific Design</div><div class="bar-track"><div class="bar-fill" style="width:96%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Adobe + CorelDRAW</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Brand Guidelines</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Technical Drafting</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+          </div>
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://drive.google.com/file/d/182Zwd4lJcwauAmbnXvlzx_szJGMTkdEM/view?usp=sharing" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+            <a class="video-intro-btn portfolio-btn" href="https://drive.google.com/file/d/15g-z4xDh_Fw_UlVhanxiVw3HzdIO0Txs/view" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>View Portfolio</a>
+          </div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Crispin is the industry insider. While other designers can learn signage, Crispin already lives in it. Seven years across three sign companies means he understands the constraints, the materials, the installation realities. His dual degree (BFA + BTech Drafting) gives him a technical edge most graphic designers lack. Less flashy than Angel, but arguably more plug-and-play for daily Signarama output.</p></div></div>
+      </div>
+    </div>
+
+    <!-- ANGEL -->
+    <div class="candidate-card">
+      <div class="card" id="d-angel">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">AR</div>
+            <div>
+              <div class="card-name">Angel R</div>
+              <div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Dominican Republic &middot; 10 yrs International Design</div>
+              <div class="card-badges"><span class="badge badge-portfolio">Portfolio</span></div>
+            </div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,700/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Angel built a design studio from scratch and scaled it 2,900%. Ten years across six countries. Industrial design background means he thinks in three dimensions. Not just a pixel pusher. A design entrepreneur who can elevate the entire creative function.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Founder &amp; Lead Designer</div><div class="exp-company">Aluro Design Studio</div><div class="exp-highlight">2,900% scaling in design delivery, 40% client retention. Full-service design operations</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Industrial Designer</div><div class="exp-company">International &middot; 6 Countries</div><div class="exp-highlight">3D modeling, Cinema 4D, product visualization, cross-cultural design collaboration</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Graphic &amp; Industrial Design</div><div class="exp-company">Adobe Suite + 3D Stack</div><div class="exp-highlight">Full Adobe Creative Suite proficiency plus Cinema 4D for 3D signage mockups</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Adobe Creative Suite</span><span class="ctag ctag-key">Cinema 4D</span><span class="ctag ctag-key">3D Modeling</span><span class="ctag">Product Visualization</span><span class="ctag">Industrial Design</span><span class="ctag">Brand Identity</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">10 years across 6 countries. Understands how design translates across cultures and markets</div></div>
+            <div class="fit-item"><div class="fit-label">Cinema 4D and 3D modeling opens the door for 3D signage mockups and client presentations</div></div>
+            <div class="fit-item"><div class="fit-label">Built and scaled a design studio from zero. Entrepreneurial mindset means self-directed work</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">3D Visualization</div><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Adobe Creative Suite</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Brand Identity</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Design Leadership</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+          </div>
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/ad988a25-e6a5-42e4-b89e-0365b6d5f670" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+            <a class="video-intro-btn portfolio-btn" href="https://angelrox.info/" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>View Portfolio</a>
+          </div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Angel is the highest-ceiling pick. Founding Aluro Design Studio and scaling it 2,900% shows business acumen most designers lack. His industrial design training and Cinema 4D skills open doors for 3D signage mockups and client presentations that could set Tysons apart. The trade-off: he's more entrepreneurial than operational. Worth it if you want someone who can elevate the creative output, not just maintain it.</p></div></div>
+      </div>
+    </div>
+
+    <!-- LINA -->
+    <div class="candidate-card">
+      <div class="card" id="d-lina">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">LP</div>
+            <div>
+              <div class="card-name">Lina P</div>
+              <div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Colombia &middot; 5+ yrs Design &amp; Illustration</div>
+              <div class="card-badges"><span class="badge badge-portfolio">Portfolio</span></div>
+            </div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,700/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Lina brings a scientific eye to design. Industrial design degree, specialized training in scientific illustration, five years of print and digital. She's also taught design. Teaching forces you to understand fundamentals at a level most practitioners skip.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Graphic Designer</div><div class="exp-company">Digital &amp; Print &middot; 5+ years</div><div class="exp-highlight">Visual content for digital and print including signage, Adobe Creative Suite proficiency</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Design Instructor</div><div class="exp-company">Education</div><div class="exp-highlight">Taught design fundamentals, deepening technical understanding of layout and production</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Industrial Design + Scientific Illustration</div><div class="exp-company">Specialized Training</div><div class="exp-highlight">Precision-focused training in spatial design and technical illustration</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Adobe Illustrator</span><span class="ctag ctag-key">Adobe Photoshop</span><span class="ctag ctag-key">Adobe InDesign</span><span class="ctag">Scientific Illustration</span><span class="ctag">Print Design</span><span class="ctag">Signage</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">Scientific illustration background means precision is her training. Brand guideline compliance comes naturally</div></div>
+            <div class="fit-item"><div class="fit-label">Industrial design degree provides spatial awareness that translates directly to physical signage</div></div>
+            <div class="fit-item"><div class="fit-label">Teaching experience proves she can articulate design decisions clearly to non-designers</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Adobe Creative Suite</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Technical Illustration</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Print Production</div><div class="bar-track"><div class="bar-fill" style="width:87%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Brand Compliance</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+          </div>
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://drive.google.com/file/d/1YKN8_9FOiQCYVhhSGSL0oZG02haZsTQ7/view?usp=sharing" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+            <a class="video-intro-btn portfolio-btn" href="https://linapinchao.myportfolio.com/" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>View Portfolio</a>
+          </div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Lina is the methodical choice. Scientific illustration means precision is literally her training. Industrial design gives her spatial awareness that translates directly to physical signage. Plus teaching experience that proves she can articulate design decisions clearly. For Tysons' corporate clients who need brand guidelines followed to the letter, her discipline is the differentiator.</p></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Designers Comparison -->
+  <div class="comparison-section">
+    <div class="section-label" style="padding-bottom:20px;padding-left:0;"><h2>Designers &mdash; Side-by-Side</h2><p>Key criteria at a glance.</p></div>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead><tr><th>Criteria</th><th>Xally I</th><th>Crispin C</th><th>Angel R</th><th>Lina P</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Location</strong></td><td>Mexico</td><td>Philippines</td><td>Dominican Republic</td><td>Colombia</td></tr>
+          <tr><td><strong>Experience</strong></td><td>Large-format specialist</td><td>7+ yrs signage design</td><td>10 yrs, 6 countries</td><td>5+ yrs design</td></tr>
+          <tr><td><strong>Key Clients</strong></td><td>Heineken, Nestle, Disney, Telcel</td><td>ACU Signs, ADR, A1 Advertising</td><td>Aluro Design Studio (founder)</td><td>Freelance + teaching</td></tr>
+          <tr><td><strong>Core Strength</strong></td><td>Production-ready artwork, CMYK</td><td>Signage-specific, CorelDRAW</td><td>3D modeling, Cinema 4D</td><td>Scientific illustration</td></tr>
+          <tr><td><strong>Tools</strong></td><td>Adobe Suite, Pre-Press</td><td>Adobe Suite, CorelDRAW</td><td>Adobe Suite, Cinema 4D</td><td>Adobe Suite</td></tr>
+          <tr><td><strong>Languages</strong></td><td>English, Spanish</td><td>English, Filipino</td><td>English, Spanish</td><td>English, Spanish</td></tr>
+          <tr><td><strong>Education</strong></td><td>Graphic Design</td><td>BFA Advertising + BTech Drafting</td><td>Industrial Design</td><td>Industrial Design + Sci Illustration</td></tr>
+          <tr><td><strong>Rate</strong></td><td>$1,700/mo</td><td>$1,700/mo</td><td>$1,700/mo</td><td>$1,700/mo</td></tr>
+          <tr><td><strong>Portfolio</strong></td><td><a href="https://drive.google.com/file/d/1avehFj8hCN4DSc4SnrSLlNdr8vt-E8ri/view" target="_blank" style="color:var(--primary);font-weight:600;">View &rarr;</a></td><td><a href="https://drive.google.com/file/d/15g-z4xDh_Fw_UlVhanxiVw3HzdIO0Txs/view" target="_blank" style="color:var(--primary);font-weight:600;">View &rarr;</a></td><td><a href="https://angelrox.info/" target="_blank" style="color:var(--primary);font-weight:600;">View &rarr;</a></td><td><a href="https://linapinchao.myportfolio.com/" target="_blank" style="color:var(--primary);font-weight:600;">View &rarr;</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /role-designers -->
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- CUSTOMER SERVICE REPS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="role-csr" class="role-panel hidden">
+
+  <div class="role-intro">
+    <div class="role-intro-card">
+      <div class="role-intro-title">Customer Service Representatives</div>
+      <div class="role-intro-text">Your dispatching calendar, your quoting pipeline, your CRM. These four candidates are wired to own the admin layer that's currently eating your GM's time. High-volume call handling, proactive communication, and the ability to manage the full quote-to-schedule lifecycle without hand-holding. The owner steps out of the admin weeds. These people step in.</div>
+    </div>
+  </div>
+
+  <div class="section-label"><h2>CSR Profiles</h2><p>4 candidates vetted for customer service and dispatching.</p></div>
+
+  <div class="candidates">
+
+    <!-- PABLO -->
+    <div class="candidate-card">
+      <div class="card featured" id="c-pablo">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar featured-avatar">PL</div>
+            <div>
+              <div class="card-name">Pablo L</div>
+              <div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Mexico &middot; 5+ yrs CS &amp; Signage Ops</div>
+              <div class="card-badges"><span class="badge badge-shortlisted">Pre-Shortlisted</span></div>
+            </div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$2,300/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Pablo has worked in signage. At Silicon Signs and The Point Company. That's not a detail to skip. He already knows the language, the workflows, the client expectations. Five years of progressive customer service with direct industry overlap. The only CSR in this batch who doesn't need to learn your business from scratch.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Customer Service &amp; Operations</div><div class="exp-company">Silicon Signs &amp; The Point Company</div><div class="exp-highlight">Signage-specific CS: quoting, scheduling, client communication for sign companies</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Project Coordinator</div><div class="exp-company">KFM &middot; Logistics &amp; Service Ops</div><div class="exp-highlight">High-volume inbound calls across fintech, airlines, and facility maintenance</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Customer Service Representative</div><div class="exp-company">Multi-Industry &middot; 5+ years progressive</div><div class="exp-highlight">Cross-industry CS foundation in high-volume, U.S.-facing environments</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">CRM Management</span><span class="ctag ctag-key">Scheduling</span><span class="ctag ctag-key">Quoting</span><span class="ctag">Signage Ops</span><span class="ctag">Inbound Calls</span><span class="ctag">Documentation</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">Direct signage industry experience at Silicon Signs and The Point Company. Knows the workflow</div></div>
+            <div class="fit-item"><div class="fit-label">Project management background adds a layer most CSRs don't bring. Can own timelines</div></div>
+            <div class="fit-item"><div class="fit-label">High-volume inbound across multiple industries. Proven under pressure</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Signage Industry Knowledge</div><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Client Communication</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">CRM / Scheduling</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Project Coordination</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+          </div>
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/aed2ee13-0f21-4853-bdd4-f37f165b7d0f" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+          </div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Pablo is the obvious first call. He's the only CSR in this batch with actual signage industry experience. Silicon Signs and The Point Company mean he already understands quoting for custom signs, managing production timelines, and speaking to B2B clients in their language. His PM background adds a layer most CSRs don't bring. At $2,300/mo he's not the cheapest, but the ramp-up savings alone justify the premium. Hit the ground running.</p></div></div>
+      </div>
+    </div>
+
+    <!-- PAULINE -->
+    <div class="candidate-card">
+      <div class="card" id="c-pauline">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">PE</div>
+            <div><div class="card-name">Pauline E</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Nigeria &middot; 6 yrs High-Volume CS</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$2,300/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Pauline handles 400-500 calls a day with a 90%+ booking rate. She runs on ServiceTitan, HubSpot, and RingCentral. Power backup systems, redundant internet. She built her setup specifically for this type of remote role. The volume machine in this batch.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Customer Service Specialist</div><div class="exp-company">Victoria Lawrence &amp; Associates</div><div class="exp-highlight">400-500 daily calls, 90%+ booking rate, full CRM pipeline management</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Customer Service Representative</div><div class="exp-company">Support R US</div><div class="exp-highlight">ServiceTitan, HubSpot, RingCentral. High-volume inbound/outbound support</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Guidance &amp; Counseling Background</div><div class="exp-company">Professional Development</div><div class="exp-highlight">De-escalation and communication skills built on counseling foundations</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">ServiceTitan</span><span class="ctag ctag-key">HubSpot</span><span class="ctag ctag-key">RingCentral</span><span class="ctag">Call Scheduling</span><span class="ctag">CRM Pipeline</span><span class="ctag">Power Backup</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">400-500 calls/day with 90%+ booking. Proven volume capacity for the Tysons pace</div></div>
+            <div class="fit-item"><div class="fit-label">ServiceTitan + HubSpot proficiency. Industry-standard tools for service businesses</div></div>
+            <div class="fit-item"><div class="fit-label">Power redundancy and backup internet. She takes remote work infrastructure seriously</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Call Volume Capacity</div><div class="bar-track"><div class="bar-fill" style="width:97%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">CRM / ServiceTitan</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Booking / Scheduling</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">De-Escalation</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/ed17ba33-61e5-4a2f-abcb-c0b636d72127" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Pauline is the volume machine. 400-500 daily calls with 90%+ booking rate is a proven track record at Victoria Lawrence and Support R US. She's already wired for the pace Tysons demands. Guidance and counseling background gives her an edge on de-escalation that's hard to train. The investment in power redundancy and backup internet shows she takes remote work seriously.</p></div></div>
+      </div>
+    </div>
+
+    <!-- RONALD -->
+    <div class="candidate-card">
+      <div class="card" id="c-ronald">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">RG</div>
+            <div><div class="card-name">Ronald G</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Philippines &middot; 10+ yrs CS &amp; Operations</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$2,000/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">A decade of customer service spanning banking, telecoms, and BPO. He's been Operations Manager at Rocket Station and Optum Global Solutions. He doesn't just handle calls. He's managed the people who handle calls. The overqualified pick in the best possible way.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Operations Manager</div><div class="exp-company">Rocket Station &amp; Optum Global Solutions</div><div class="exp-highlight">Managed entire service teams, built SOPs, quality assurance oversight</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Senior Customer Service</div><div class="exp-company">Banking &amp; Telecommunications</div><div class="exp-highlight">Script adherence, accurate information capture, maintaining quality during peak hours</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">BPO Operations</div><div class="exp-company">Multi-Industry &middot; 10+ years</div><div class="exp-highlight">Cross-industry customer service foundation with leadership progression</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">CRM Management</span><span class="ctag ctag-key">Team Leadership</span><span class="ctag ctag-key">Quality Assurance</span><span class="ctag">SOPs</span><span class="ctag">BPO Operations</span><span class="ctag">Scheduling</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">10+ years with Operations Manager titles. He's built and managed service teams, not just worked in one</div></div>
+            <div class="fit-item"><div class="fit-label">At $2,000/mo he's the cheapest in this group while bringing the most senior experience</div></div>
+            <div class="fit-item"><div class="fit-label">He'll systemize the dispatching calendar and CRM pipeline like someone who's built those systems before</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Operations Management</div><div class="bar-track"><div class="bar-fill" style="width:96%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Client Communication</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Process Building</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Team Leadership</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/f3e3e6a5-5c04-4961-8cdc-50b50595ed7d" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Ronald is overqualified in the best possible way. Operations Manager titles at Rocket Station and Optum mean he's managed entire service teams, not just worked in one. At $2,000/mo he's the cheapest while bringing the most senior experience. He might outgrow a pure CSR role quickly. The upside: he'll systemize the dispatching calendar and CRM pipeline like someone who's built those systems before, not just used them.</p></div></div>
+      </div>
+    </div>
+
+    <!-- SHELSEA -->
+    <div class="candidate-card">
+      <div class="card" id="c-shelsea">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">SA</div>
+            <div><div class="card-name">Shelsea A</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Honduras &middot; 6+ yrs BPO &amp; CS</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$2,200/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Six years in BPO handling high-volume inbound for U.S. customers. Dyson on the client list. Script adherence and accurate documentation are her bread and butter. Fluent English, no accent concerns. The reliable operator in this group.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Customer Service Representative</div><div class="exp-company">Dyson &middot; BPO</div><div class="exp-highlight">High-volume inbound calls for premium U.S.-based brand. Script adherence, quality standards</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">BPO Agent</div><div class="exp-company">Multiple Service Companies &middot; 6+ yrs</div><div class="exp-highlight">U.S. customer-facing roles, accurate appointment booking, documentation</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Bilingual CS Professional</div><div class="exp-company">Honduras</div><div class="exp-highlight">Fluent English, native Spanish. No accent barriers for U.S. client calls</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Inbound Calls</span><span class="ctag ctag-key">Script Adherence</span><span class="ctag ctag-key">Appointment Booking</span><span class="ctag">Documentation</span><span class="ctag">BPO Operations</span><span class="ctag">Bilingual</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">6+ years serving U.S. customers. Understands American business communication norms</div></div>
+            <div class="fit-item"><div class="fit-label">Dyson as a client proves corporate service standards. Consistency under pressure</div></div>
+            <div class="fit-item"><div class="fit-label">Honduras timezone aligns with U.S. East Coast. Fluent English, native Spanish</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Inbound Call Handling</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Script Adherence</div><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Documentation</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">English Fluency</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/80296ee9-306b-481e-a347-a6f0db4affcf" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Shelsea is the BPO-trained operator. Six years serving U.S. customers means she understands American business communication without coaching. Dyson as a client proves she's been held to corporate service standards. Her strength is consistency: script adherence, accurate booking, thorough documentation. At $2,200/mo she's the middle-ground pick. Not the flashiest, but reliable in a role where reliability is the whole point.</p></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CSR Comparison -->
+  <div class="comparison-section">
+    <div class="section-label" style="padding-bottom:20px;padding-left:0;"><h2>CSRs &mdash; Side-by-Side</h2><p>Key criteria at a glance.</p></div>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead><tr><th>Criteria</th><th>Pablo L</th><th>Pauline E</th><th>Ronald G</th><th>Shelsea A</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Location</strong></td><td>Mexico</td><td>Nigeria</td><td>Philippines</td><td>Honduras</td></tr>
+          <tr><td><strong>Experience</strong></td><td>5+ yrs (signage!)</td><td>6 yrs high-volume</td><td>10+ yrs ops mgmt</td><td>6+ yrs BPO</td></tr>
+          <tr><td><strong>Key Employers</strong></td><td>Silicon Signs, The Point Co, KFM</td><td>Victoria Lawrence, Support R US</td><td>Rocket Station, Optum</td><td>Dyson, multiple BPOs</td></tr>
+          <tr><td><strong>Core Strength</strong></td><td>Signage industry knowledge</td><td>Volume (400-500 calls/day)</td><td>Operations management</td><td>Script adherence, reliability</td></tr>
+          <tr><td><strong>Tools</strong></td><td>CRM, Scheduling, Quoting</td><td>ServiceTitan, HubSpot, RingCentral</td><td>CRM, SOPs, QA</td><td>Inbound systems, documentation</td></tr>
+          <tr><td><strong>Languages</strong></td><td>English, Spanish</td><td>English</td><td>English, Filipino</td><td>English, Spanish</td></tr>
+          <tr><td><strong>Rate</strong></td><td>$2,300/mo</td><td>$2,300/mo</td><td class="highlight-cell">$2,000/mo</td><td>$2,200/mo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /role-csr -->
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SALES DEVELOPMENT REPS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="role-sdr" class="role-panel hidden">
+
+  <div class="role-intro">
+    <div class="role-intro-card">
+      <div class="role-intro-title">Sales Development Representatives</div>
+      <div class="role-intro-text">Hunters. Not farmers. These candidates specialize in B2B outbound prospecting, corporate acquisition, and high-volume pipeline building. The Tysons corridor demands someone who can articulate the ROI of premium signage to a CEO-level decision-maker and set 50+ qualified touches per day. We're leveraging the 80% labor savings to deploy outbound volume that would be cost-prohibitive with a local hire.</div>
+    </div>
+  </div>
+
+  <div class="section-label"><h2>SDR Profiles</h2><p>4 candidates vetted for B2B sales development and outbound prospecting.</p></div>
+
+  <div class="candidates">
+
+    <!-- ANGELIE -->
+    <div class="candidate-card">
+      <div class="card featured" id="s-angelie">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar featured-avatar">AL</div>
+            <div>
+              <div class="card-name">Angelie L</div>
+              <div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Philippines &middot; 10+ yrs Sales &amp; BDR</div>
+              <div class="card-badges"><span class="badge badge-shortlisted">Pre-Shortlisted</span></div>
+            </div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,700/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Ten years of sales. Appointment setter to BDR to Director for Growth. Real estate, SaaS, service businesses. She's walked the entire outbound sales journey and led teams on every rung. Not just a dialer. A builder of outbound engines.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Director for Growth</div><div class="exp-company">Sales Leadership</div><div class="exp-highlight">Led outbound teams, built pipeline strategies, managed full sales cycle</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Business Development Rep</div><div class="exp-company">Real Estate &amp; SaaS</div><div class="exp-highlight">Outbound calling, appointment setting, CRM management across industries</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Appointment Setter</div><div class="exp-company">Service Businesses &middot; 10+ yrs total</div><div class="exp-highlight">Foundation in high-volume outbound, qualification frameworks, and closing</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">CRM Management</span><span class="ctag ctag-key">Outbound Calling</span><span class="ctag ctag-key">LinkedIn Prospecting</span><span class="ctag">Appointment Setting</span><span class="ctag">Pipeline Building</span><span class="ctag">Sales Leadership</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">10 years progressing from setter to Director for Growth. She builds outbound engines, not just makes calls</div></div>
+            <div class="fit-item"><div class="fit-label">Real estate and SaaS experience means she's comfortable speaking ROI to decision-makers</div></div>
+            <div class="fit-item"><div class="fit-label">At $1,700/mo for Director-level experience, the math is absurd. High ROI</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Outbound Sales</div><div class="bar-track"><div class="bar-fill" style="width:96%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Pipeline Building</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Sales Leadership</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">CRM Proficiency</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/c3d29bb5-01e4-47be-b7db-e8861d7f8b3c" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Angelie is the most proven SDR in this batch. A decade progressing from appointment setter to Director for Growth shows she didn't just make calls. She built outbound engines. Real estate and SaaS experience means she's comfortable speaking to decision-makers about ROI, exactly what Tysons' tech firms and government contractors need to hear. At $1,700/mo for Director-level experience, she'll set qualified appointments AND improve the playbook.</p></div></div>
+      </div>
+    </div>
+
+    <!-- CHELSEA -->
+    <div class="candidate-card">
+      <div class="card" id="s-chelsea">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">CS</div>
+            <div><div class="card-name">Chelsea S</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Jamaica &middot; 9 yrs Sales &amp; Conversion</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,600/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Nine years in inbound sales. 80% monthly conversion rate. 300+ daily calls. 50+ sales leads per month. Those aren't aspirational goals. Those are her actual numbers at Relationship Hero, ModSquad, and Phone Animal. The conversion machine.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Sales Representative</div><div class="exp-company">Relationship Hero &amp; ModSquad</div><div class="exp-highlight">80% monthly conversion rate, 300+ daily calls, 50+ monthly leads</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Inbound Sales Agent</div><div class="exp-company">Phone Animal &middot; 9 yrs total</div><div class="exp-highlight">Salesforce, Boomtown, Zendesk. High-volume conversion across service sectors</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Customer Service &amp; Sales</div><div class="exp-company">Multi-Industry</div><div class="exp-highlight">Consistent top performer in both inbound sales and customer retention</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Salesforce</span><span class="ctag ctag-key">Boomtown</span><span class="ctag ctag-key">Zendesk</span><span class="ctag">Inbound Sales</span><span class="ctag">Lead Conversion</span><span class="ctag">High-Volume Calls</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">80% conversion rate on 300+ daily calls. Proven volume AND quality simultaneously</div></div>
+            <div class="fit-item"><div class="fit-label">Salesforce, Boomtown, Zendesk. CRM-native, zero tool ramp-up needed</div></div>
+            <div class="fit-item"><div class="fit-label">At $1,600/mo she's the cheapest with the most proven conversion metrics. Maximum ROI</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Conversion Rate</div><div class="bar-track"><div class="bar-fill" style="width:97%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Call Volume</div><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">CRM / Salesforce</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Lead Qualification</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/0507b9ac-48bb-4663-813a-c4431b81638a" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Chelsea is the conversion machine. While other SDRs bring outbound muscle, Chelsea's 80% conversion rate on 300+ daily calls means she'll close what walks in while also hunting outbound. Nine years of consistency at $1,600/mo. The calculated risk worth taking if you want raw volume and results over seniority.</p></div></div>
+      </div>
+    </div>
+
+    <!-- KOKETSO -->
+    <div class="candidate-card">
+      <div class="card" id="s-koketso">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">KR</div>
+            <div><div class="card-name">Koketso R</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> South Africa &middot; 3+ yrs Outbound SDR</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,900/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Three years of dedicated outbound prospecting. Consistently exceeds monthly targets. HubSpot, Salesforce, and Zoho in his stack. Previous experience at OutSurance, Klaretech, and Sanlam. The CRM-native hunter in this batch.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Sales Development Rep</div><div class="exp-company">Klaretech &amp; OutSurance</div><div class="exp-highlight">High-volume outbound prospecting, consistently exceeding monthly targets</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Business Development</div><div class="exp-company">Sanlam</div><div class="exp-highlight">B2B prospecting at a major financial institution, CRM pipeline management</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">SDR Foundation</div><div class="exp-company">HubSpot, Salesforce, Zoho</div><div class="exp-highlight">Triple-CRM proficiency across outbound-focused roles</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">HubSpot</span><span class="ctag ctag-key">Salesforce</span><span class="ctag ctag-key">Zoho</span><span class="ctag">Outbound Prospecting</span><span class="ctag">Cold Calling</span><span class="ctag">Pipeline Mgmt</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">3 years purely focused on outbound. Trained enough to execute, hungry enough to grind</div></div>
+            <div class="fit-item"><div class="fit-label">HubSpot + Salesforce + Zoho. Zero tool ramp-up for any CRM Signarama uses</div></div>
+            <div class="fit-item"><div class="fit-label">Financial institution experience (OutSurance, Sanlam) shows he works where metrics matter</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Outbound Prospecting</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">CRM (Triple Stack)</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Pipeline Management</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Target Achievement</div><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/fb0ec934-4ae7-48bc-9730-8d7f5a4784ae" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Koketso is the CRM-native hunter. Three years purely focused on outbound puts him in the sweet spot. His triple CRM proficiency (HubSpot, Salesforce, Zoho) means zero tool ramp-up. Prior roles at OutSurance and Sanlam show he's worked in environments where metrics matter. For the 50+ touches/day Signarama needs, he's built for that volume.</p></div></div>
+      </div>
+    </div>
+
+    <!-- MARCO -->
+    <div class="candidate-card">
+      <div class="card" id="s-marco">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">ME</div>
+            <div><div class="card-name">Marco E</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Brazil &middot; 5+ yrs Sales &amp; BD</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$2,700/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Bilingual sales professional. Five years spanning lead generation, media buying, and business development. SpectrumVoIP, Polls Platform, Wizard by Pearson. He sells in two languages and two markets. The strategic SDR pick.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Business Development</div><div class="exp-company">SpectrumVoIP</div><div class="exp-highlight">Technology services sales to businesses, lead generation, media buying</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Sales &amp; Lead Generation</div><div class="exp-company">Polls Platform</div><div class="exp-highlight">B2B prospecting, pipeline building across US and Brazilian markets</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">English Language Teacher</div><div class="exp-company">Wizard by Pearson</div><div class="exp-highlight">Teaching foundation reinforces communication clarity for US-market selling</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Lead Generation</span><span class="ctag ctag-key">Media Buying</span><span class="ctag ctag-key">Business Development</span><span class="ctag">Cold Calling</span><span class="ctag">Bilingual Sales</span><span class="ctag">CRM Management</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">Media buying background adds a dimension most SDRs lack: he understands lead generation strategy</div></div>
+            <div class="fit-item"><div class="fit-label">SpectrumVoIP: sold technology services to businesses. Comfortable with B2B ROI conversations</div></div>
+            <div class="fit-item"><div class="fit-label">Bilingual (English/Portuguese). Former English teacher. Communication clarity is his strength</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Business Development</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Lead Generation</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Media Buying</div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Bilingual Communication</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://drive.google.com/file/d/1drnFxWCWa46aYipFAmqpU5IHKjh7Y0Sr/view?usp=sharing" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Marco is the premium pick at $2,700/mo. The higher rate reflects genuine business development experience, not just cold calling. Media buying background adds a dimension most SDRs lack: he understands how leads are generated before they hit the pipeline. SpectrumVoIP means he's sold tech services to businesses. The trade-off: higher cost for a more strategic seller. The investment if Signarama wants someone who can eventually own the outbound strategy, not just execute it.</p></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SDR Comparison -->
+  <div class="comparison-section">
+    <div class="section-label" style="padding-bottom:20px;padding-left:0;"><h2>SDRs &mdash; Side-by-Side</h2><p>Key criteria at a glance.</p></div>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead><tr><th>Criteria</th><th>Angelie L</th><th>Chelsea S</th><th>Koketso R</th><th>Marco E</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Location</strong></td><td>Philippines</td><td>Jamaica</td><td>South Africa</td><td>Brazil</td></tr>
+          <tr><td><strong>Experience</strong></td><td>10+ yrs sales</td><td>9 yrs sales</td><td>3+ yrs outbound</td><td>5+ yrs BD</td></tr>
+          <tr><td><strong>Key Employers</strong></td><td>Progression: Setter &rarr; Director</td><td>Relationship Hero, ModSquad</td><td>OutSurance, Klaretech, Sanlam</td><td>SpectrumVoIP, Polls Platform</td></tr>
+          <tr><td><strong>Core Strength</strong></td><td>Sales leadership, pipeline</td><td>80% conversion, 300+ calls/day</td><td>CRM-native outbound</td><td>Strategic BD, media buying</td></tr>
+          <tr><td><strong>Tools</strong></td><td>CRM, LinkedIn, Outbound</td><td>Salesforce, Boomtown, Zendesk</td><td>HubSpot, Salesforce, Zoho</td><td>Lead Gen, Media Buying, CRM</td></tr>
+          <tr><td><strong>Languages</strong></td><td>English, Filipino</td><td>English</td><td>English</td><td>English, Portuguese</td></tr>
+          <tr><td><strong>Rate</strong></td><td>$1,700/mo</td><td class="highlight-cell">$1,600/mo</td><td>$1,900/mo</td><td>$2,700/mo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /role-sdr -->
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PROJECT MANAGERS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="role-pm" class="role-panel hidden">
+
+  <div class="role-intro">
+    <div class="role-intro-card">
+      <div class="role-intro-title">Project Managers</div>
+      <div class="role-intro-text">Your first overseas operational anchor. These project managers are built to own dates, progress, and accountability for every job on the board. From permit acquisition to cross-functional team coordination (Design, CSR, Installers), they'll serve as the right hand your General Manager needs to step back from day-to-day operations and focus on franchise strategy. This is the SWAT edge: a "Right Hand" who understands the technical nuances of signage and can communicate with authority to on-site teams.</div>
+    </div>
+  </div>
+
+  <div class="section-label"><h2>PM Profiles</h2><p>4 candidates vetted for signage project management and operations.</p></div>
+
+  <div class="candidates">
+
+    <!-- JAVIER -->
+    <div class="candidate-card">
+      <div class="card featured" id="p-javier">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar featured-avatar">JO</div>
+            <div>
+              <div class="card-name">Javier O</div>
+              <div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Honduras &middot; Construction PM &middot; Lean Six Sigma</div>
+              <div class="card-badges"><span class="badge badge-shortlisted">Pre-Shortlisted</span></div>
+            </div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,800/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Eighty to a hundred concurrent projects. $1.1 million in value. 71% improvement in escalation efficiency. 4.7+ customer satisfaction. Project Management certified, Lean Six Sigma Yellow Belt. C2 English. These are not words. These are numbers.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Project Manager</div><div class="exp-company">Ergeon &middot; Residential Construction</div><div class="exp-highlight">80-100 concurrent projects, $1.1M+ value, 71% escalation improvement, 4.7+ CSAT</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Lean Six Sigma Yellow Belt</div><div class="exp-company">Certification</div><div class="exp-highlight">Process optimization, waste reduction, operational efficiency frameworks</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">PM Certified &middot; C2 English</div><div class="exp-company">Bilingual Professional</div><div class="exp-highlight">Full professional bilingual proficiency. Certified project management methodology</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Project Management</span><span class="ctag ctag-key">Lean Six Sigma</span><span class="ctag ctag-key">Construction Ops</span><span class="ctag">Timeline Management</span><span class="ctag">Cross-Functional Teams</span><span class="ctag">Process Optimization</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">80-100 concurrent projects at Ergeon. Volume management that exceeds anything Tysons will throw at him</div></div>
+            <div class="fit-item"><div class="fit-label">71% escalation efficiency improvement. He doesn't just manage timelines. He fixes broken processes</div></div>
+            <div class="fit-item"><div class="fit-label">$1,800/mo with PM certification and Lean Six Sigma. The ROI conversation is over before it starts</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Multi-Project Management</div><div class="bar-track"><div class="bar-fill" style="width:97%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Process Optimization</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Stakeholder Communication</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Construction Knowledge</div><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/182d3056-06c2-487c-9835-e20bb3104318" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Javier is the force multiplier the owner needs. Managing 80-100 concurrent construction projects at Ergeon puts him in a volume league most PMs never touch. His 71% escalation efficiency improvement shows he doesn't just manage timelines. He fixes broken processes. Lean Six Sigma certification means he thinks in systems. At $1,800/mo for this level of operational horsepower, he's the right hand for the General Manager.</p></div></div>
+      </div>
+    </div>
+
+    <!-- DEBORAH -->
+    <div class="candidate-card">
+      <div class="card" id="p-deborah">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">DB</div>
+            <div><div class="card-name">Deborah B</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Nigeria &middot; 5+ yrs Signage &amp; Construction PM</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$2,000/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Five years managing signage, construction, and production projects. Building Technology degree from Covenant University. Monday.com, Trello, HubSpot, Corebridge. She's worked in the exact vertical Signarama operates in. The industry-matched PM.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Project Manager</div><div class="exp-company">Signage &amp; Construction</div><div class="exp-highlight">5+ years managing signage production, permits, installations, cross-functional teams</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Building Technology</div><div class="exp-company">Covenant University &middot; Bachelor's</div><div class="exp-highlight">Structural knowledge of construction, materials, and installation logistics</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Sales-Driven PM</div><div class="exp-company">Monday.com, Trello, HubSpot, Corebridge</div><div class="exp-highlight">PM tools proficiency with sales pipeline support experience</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Monday.com</span><span class="ctag ctag-key">Trello</span><span class="ctag ctag-key">HubSpot</span><span class="ctag ctag-key">Corebridge</span><span class="ctag">Signage Production</span><span class="ctag">Permits</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">5+ years in signage and construction PM. Already speaks the industry language</div></div>
+            <div class="fit-item"><div class="fit-label">Building Technology degree adds structural knowledge most PMs lack</div></div>
+            <div class="fit-item"><div class="fit-label">Monday.com and Corebridge map directly to signage PM workflows</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Signage Industry PM</div><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">PM Tools (Monday/Corebridge)</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Construction Knowledge</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Cross-Functional Coordination</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://drive.google.com/file/d/1ijuOXjr09ChhXx9alq5cTwrr0X2NpZJp/view?usp=sharing" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Deborah is the industry-matched PM. Five years in signage and construction project management means she understands permit timelines, production dependencies, and installation coordination without needing to be taught. Her Building Technology degree adds structural knowledge most PMs lack. Monday.com and Corebridge proficiency maps directly to common signage workflows. At $2,000/mo she's the premium pick, but for someone who already speaks the signage language, the premium is justified.</p></div></div>
+      </div>
+    </div>
+
+    <!-- ISADORA -->
+    <div class="candidate-card">
+      <div class="card" id="p-isadora">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">IR</div>
+            <div><div class="card-name">Isadora R</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Brazil &middot; Signage PM + Architecture + MBA</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,900/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Architecture background meets signage PM. Three years specialized in signage project management. MBA in Project Management. Nearly a decade of spatial thinking before she touched her first sign project. The analytical mind in this group.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Signage Project Manager</div><div class="exp-company">Signage Industry &middot; 3+ yrs</div><div class="exp-highlight">Monday.com, Corebridge, HubSpot. End-to-end signage project management</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Architect</div><div class="exp-company">MRV Engenharia &amp; LoebCapote Arquitetura</div><div class="exp-highlight">Nearly a decade of architectural practice, complex build coordination</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">MBA in Project Management</div><div class="exp-company">Architecture + MBA dual foundation</div><div class="exp-highlight">Formal PM methodology layered on architectural spatial thinking</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Monday.com</span><span class="ctag ctag-key">Corebridge</span><span class="ctag ctag-key">HubSpot</span><span class="ctag">Architecture</span><span class="ctag">Signage PM</span><span class="ctag">MBA</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">3+ years in signage PM specifically. Combined with 9 years architectural practice</div></div>
+            <div class="fit-item"><div class="fit-label">MBA in Project Management. Formal methodology for complex timelines and cross-functional teams</div></div>
+            <div class="fit-item"><div class="fit-label">Architecture degree means she understands creative and structural sides of signage projects</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Signage PM</div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Architectural Knowledge</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">PM Methodology (MBA)</div><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">PM Tools</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/b06cc22b-ac4f-4a05-b439-5119a57889b4" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Isadora brings the deepest educational foundation in this PM group. Architecture degree plus MBA in Project Management is a rare combination. Three years in signage PM specifically, combined with nine years of architectural practice, means she understands both the creative and structural sides. MRV Engenharia and LoebCapote on her resume show she's worked on complex builds. Fluent in Portuguese and English. At $1,900/mo, she's the analytical mind who'll bring structure to chaos.</p></div></div>
+      </div>
+    </div>
+
+    <!-- ADRIANA -->
+    <div class="candidate-card">
+      <div class="card" id="p-adriana">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">AM</div>
+            <div><div class="card-name">Adriana M</div><div class="card-location"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Honduras &middot; Architecture + Construction PM</div></div>
+          </div>
+          <div class="card-rate"><div class="card-rate-amount">$1,800/mo</div><div class="card-rate-period">USD / Month</div></div>
+        </div>
+        <div class="card-body">
+          <div class="card-narrative">Architecture-trained. AutoCAD and Revit proficient. Construction coordination is her native language. She's managed projects at Conceptos Diseno y Construcciones and Constructora Marrder. The technical PM who bridges design and installation.</div>
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Project Coordinator</div><div class="exp-company">Conceptos Diseno y Construcciones</div><div class="exp-highlight">Construction coordination, signage projects, cross-functional team management</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-content"><div class="exp-role">Construction Manager</div><div class="exp-company">Constructora Marrder</div><div class="exp-highlight">Hands-on construction management, AutoCAD, Revit, installation logistics</div></div></div>
+            <div class="exp-item"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-content"><div class="exp-role">Architecture Training</div><div class="exp-company">Monday.com, Trello, HubSpot, AutoCAD, Revit</div><div class="exp-highlight">Technical tool proficiency spanning both design and project management</div></div></div>
+          </div>
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">AutoCAD</span><span class="ctag ctag-key">Revit</span><span class="ctag ctag-key">Monday.com</span><span class="ctag ctag-key">Trello</span><span class="ctag">HubSpot</span><span class="ctag">Construction Coordination</span>
+          </div>
+          <div class="card-section-title">Signarama Fit Indicators</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">AutoCAD + Revit proficiency means she can read and verify design files, not just manage timelines</div></div>
+            <div class="fit-item"><div class="fit-label">Construction coordination at two firms gives hands-on installation logistics understanding</div></div>
+            <div class="fit-item"><div class="fit-label">At $1,800/mo, she bridges design and installation teams with technical authority</div></div>
+          </div>
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Technical Design (CAD/Revit)</div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Construction Coordination</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">PM Tools</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Cross-Team Communication</div><div class="bar-track"><div class="bar-fill" style="width:87%"></div></div></div>
+          </div>
+          <div class="card-actions"><a class="video-intro-btn" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/9ddc20c0-23b4-4296-b864-ce6257ad32f6" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a></div>
+        </div>
+        <div class="card-footer"><div class="card-recruiter-note"><div class="recruiter-note-title">Recruiter Note</div><p>Adriana is the technical PM pick. Architecture training with AutoCAD and Revit proficiency means she can actually read and verify design files, not just manage the timeline around them. Her construction coordination at Conceptos Diseno and Constructora Marrder gives hands-on understanding of installation logistics. At $1,800/mo she matches Javier's rate with a different skillset: less volume management, more technical oversight. The pick if Signarama needs a PM who bridges design and installation with authority.</p></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PM Comparison -->
+  <div class="comparison-section">
+    <div class="section-label" style="padding-bottom:20px;padding-left:0;"><h2>Project Managers &mdash; Side-by-Side</h2><p>Key criteria at a glance.</p></div>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead><tr><th>Criteria</th><th>Javier O</th><th>Deborah B</th><th>Isadora R</th><th>Adriana M</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Location</strong></td><td>Honduras</td><td>Nigeria</td><td>Brazil</td><td>Honduras</td></tr>
+          <tr><td><strong>Experience</strong></td><td>80-100 concurrent projects</td><td>5+ yrs signage PM</td><td>3+ yrs signage + 9 yrs arch</td><td>Construction + architecture</td></tr>
+          <tr><td><strong>Key Employers</strong></td><td>Ergeon</td><td>Signage &amp; Construction firms</td><td>MRV Engenharia, LoebCapote</td><td>Conceptos Diseno, Constructora Marrder</td></tr>
+          <tr><td><strong>Core Strength</strong></td><td>Volume PM, process optimization</td><td>Industry-matched signage PM</td><td>Architecture + MBA + signage</td><td>Technical PM (CAD/Revit)</td></tr>
+          <tr><td><strong>Tools</strong></td><td>PM certified, Lean Six Sigma</td><td>Monday.com, Trello, HubSpot, Corebridge</td><td>Monday.com, Corebridge, HubSpot</td><td>AutoCAD, Revit, Monday.com, Trello</td></tr>
+          <tr><td><strong>Languages</strong></td><td>English (C2), Spanish</td><td>English</td><td>English, Portuguese</td><td>English, Spanish</td></tr>
+          <tr><td><strong>Education</strong></td><td>PM Cert + Lean Six Sigma YB</td><td>BSc Building Technology</td><td>Architecture + MBA in PM</td><td>Architecture</td></tr>
+          <tr><td><strong>Rate</strong></td><td class="highlight-cell">$1,800/mo</td><td>$2,000/mo</td><td>$1,900/mo</td><td class="highlight-cell">$1,800/mo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /role-pm -->
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- ADVISOR SECTION -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="advisor-section">
+    <div class="section-label" style="padding-bottom:20px;">
+      <h2>Your Talent Advisor</h2>
+    </div>
+    <div class="advisor-card">
+      <img class="advisor-avatar" src="https://saganrecruitment.com/wp-content/uploads/2025/10/Jesus-Pacheco.jpeg" alt="Jesus Pacheco">
+      <div class="advisor-info">
+        <div class="advisor-label">Sagan White Glove</div>
+        <div class="advisor-name">Jesus Pacheco</div>
+        <div class="advisor-role">Head of Revenue &middot; Sagan</div>
+        <p class="advisor-summary">Jesus leads Sagan's White Glove placements, connecting premium global talent with U.S. companies through a high-touch, human-centered approach. With a background in supply chain systems and telecom engineering, he brings operational thinking to every hire. He is your direct point of contact for scheduling interviews, coordinating next steps, and building this remote unit from the ground up.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-logos">
+      <span style="font-weight:800;color:#B31D2D;font-size:16px;font-family:Montserrat,sans-serif;letter-spacing:-0.5px;">SIGNARAMA</span>
+      <span class="footer-x">&times;</span>
+      <img src="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Logo-2-e1759568299542.png" alt="Sagan">
+    </div>
+    <p>Prepared by <a href="https://getsagan.com" target="_blank">Sagan</a> for Signarama Tysons Corner &middot; Remote Team Placement &middot; April 2026</p>
+  </footer>
+
+<script>
+function showRole(r) {
+  document.querySelectorAll('.role-panel').forEach(function(p) { p.classList.add('hidden'); });
+  document.querySelectorAll('.role-btn').forEach(function(b) { b.classList.remove('active'); });
+  var panel = document.getElementById('role-' + r);
+  if (panel) panel.classList.remove('hidden');
+  var btn = document.querySelector('.role-btn[data-role="' + r + '"]');
+  if (btn) btn.classList.add('active');
+  var nav = document.querySelector('.role-nav');
+  if (nav) window.scrollTo({ top: nav.offsetTop - 72, behavior: 'smooth' });
+}
+</script>
+</body></html>
